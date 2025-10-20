@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=apVlDI_pWuk&list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&index=4
+https://www.youtube.com/watch?v=Bc5FhraD3XE&list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&index=5
 
 # first run
 
@@ -20,6 +20,7 @@ bin/console debug:router - список роутов
 bin/console debug:match /default/1 - найти роут по урлу
 bin/console make:entity - создать сущность
 bin/console make:crud - создать crud
+bin/console make:migration - создать миграцию, на разницу в entity и БД
 
 bin/console doctrine:migrations:generate - создаст пустой файл миграции
 bin/console doctrine:migrations:diff - создать миграцию, на разницу в entity и БД
