@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=Bc5FhraD3XE&list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&index=5
+https://www.youtube.com/watch?v=N4g5uUsi5xs&list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&index=6
 
 # first run
 
@@ -9,7 +9,7 @@ composer create-project symfony/skeleton:"6.4.*" project
 composer require webapp
 mv -r project/* ../
 
-# чтобы вкл debug панель
+# Чтобы вкл debug панель
 APP_DEBUG=1
 
 #
@@ -28,3 +28,5 @@ bin/console doctrine:migrations:migrate - запустить миграции
 bin/console doctrine:migrations:migrate -v
 bin/console doctrine:migrations:migrate -vv
 bin/console doctrine:migrations:migrate -vvv - режимы отладки выполнения запросов
+bin/console doctrine:migrations:status
+bin/console doctrine:migrations:execute 'DoctrineMigrations\Version20251022204154' --down - откатить миграцию
