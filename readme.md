@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=N4g5uUsi5xs&list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&index=6
+https://youtu.be/N4g5uUsi5xs?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=690
 
 # first run
 
