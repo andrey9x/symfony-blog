@@ -1,4 +1,4 @@
-https://youtu.be/N4g5uUsi5xs?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=690
+https://youtu.be/q7Da_b1V2s4?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=286
 
 # first run
 
@@ -30,3 +30,10 @@ bin/console doctrine:migrations:migrate -vv
 bin/console doctrine:migrations:migrate -vvv - режимы отладки выполнения запросов
 bin/console doctrine:migrations:status
 bin/console doctrine:migrations:execute 'DoctrineMigrations\Version20251022204154' --down - откатить миграцию
+
+# авторизация
+composer require symfony/security-bundle
+composer require symfonycasts/verify-email-bundle
+bin/console make:user
+bin/console make:registration-form
+bin/console make:controller Login
