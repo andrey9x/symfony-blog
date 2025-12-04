@@ -1,4 +1,4 @@
-https://youtu.be/q7Da_b1V2s4?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=286
+https://youtu.be/jtRTUPQhJeA?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=936
 
 # first run
 
@@ -28,6 +28,7 @@ bin/console doctrine:migrations:migrate - запустить миграции
 bin/console doctrine:migrations:migrate -v
 bin/console doctrine:migrations:migrate -vv
 bin/console doctrine:migrations:migrate -vvv - режимы отладки выполнения запросов
+bin/console d:m:m - сокращенно bin/console doctrine:migrations:migrate
 bin/console doctrine:migrations:status
 bin/console doctrine:migrations:execute 'DoctrineMigrations\Version20251022204154' --down - откатить миграцию
 

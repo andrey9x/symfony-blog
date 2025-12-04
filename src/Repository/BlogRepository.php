@@ -42,9 +42,24 @@ class BlogRepository extends ServiceEntityRepository
     //        ;
     //    }
 
+    public function getBlogs(): array
+    {
+        return $this
+            ->createQueryBuilder('b')
+            ->setMaxResults(6)
+            ->getQuery()
+            ->getResult();
+    }
+
     public function findByBlogFilter(BlogFilter $blogFilter)
     {
         $blogs = $this->createQueryBuilder('b');
+
+        if ($blogFilter->getUser()) {
+            $blogs
+                ->andWhere('b.user = :user')
+                ->setParameter('user', $blogFilter->getUser());
+        }
 
         if ($blogFilter->getTitle()) {
             $blogs

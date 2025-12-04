@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\PersistentCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: BlogRepository::class)]
@@ -33,11 +34,20 @@ class Blog
     #[ORM\JoinColumn(name: 'category_id', referencedColumnName: 'id')]
     private Category|null $category = null;
 
+    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\JoinColumn(name: 'user_id', referencedColumnName: 'id')]
+    private User|null $user = null;
+
     #[ORM\JoinTable(name: 'tags_to_blog')]
     #[ORM\JoinColumn(name: 'blog_id', referencedColumnName: 'id')]
     #[ORM\InverseJoinColumn(name: 'tag_id', referencedColumnName: 'id', unique: true)]
     #[ORM\ManyToMany(targetEntity: Tag::class, cascade: ['persist'])]
     private ArrayCollection|PersistentCollection $tags;
+
+    public function __construct(UserInterface | User $user)
+    {
+        $this->user = $user;
+    }
 
     public function getId(): ?int
     {
@@ -107,5 +117,17 @@ class Blog
     public function addTag(Tag $tag): void
     {
         $this->tags[] = $tag;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }
