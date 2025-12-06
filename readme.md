@@ -1,4 +1,4 @@
-https://youtu.be/jtRTUPQhJeA?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=936
+https://youtu.be/MvLJJ9Vctfg?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=454
 
 # first run
 
@@ -38,3 +38,10 @@ composer require symfonycasts/verify-email-bundle
 bin/console make:user
 bin/console make:registration-form
 bin/console make:controller Login
+
+# пагинация
+composer require knplabs/knp-paginator-bundle
+
+# фикстуры
+composer require --dev orm-fixtures
+bin/console doctrine:fixtures:load - применить фикстуры
