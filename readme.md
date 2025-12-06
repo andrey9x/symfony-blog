@@ -1,4 +1,4 @@
-https://youtu.be/MvLJJ9Vctfg?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=454
+https://youtu.be/TW-NaTfafoE?list=PLxUDM49DgcpCD0m7sE-K7POzTHCRY-f0d&t=204
 
 # first run
 
@@ -45,3 +45,5 @@ composer require knplabs/knp-paginator-bundle
 # фикстуры
 composer require --dev orm-fixtures
 bin/console doctrine:fixtures:load - применить фикстуры
+
+bin/console debug:container | grep ContentWatchApi
